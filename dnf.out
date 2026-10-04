@@ -1,0 +1,9 @@
+ID     | Command line                                                                                              | Date and time    | Action(s)      | Altered
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+     7 | install -y policycoreutils-python-utils                                                                   | 2026-10-04 16:31 | Install        |    8   
+     6 | install -y acl                                                                                            | 2026-10-04 16:07 | Install        |    1  <
+     5 | install -y nginx libcap-ng-utils                                                                          | 2026-10-04 13:38 | Install        |    9 >E
+     4 | upgrade -y                                                                                                | 2026-10-04 13:36 | I, O, U        |  120 EE
+     3 | autoremove -y --setopt=metadata_expire=-1                                                                 | 2026-10-01 19:46 | Removed        |    7  <
+     2 | remove -y --setopt=metadata_expire=-1 spice-vdagent open-vm-tools qemu-guest-agent                        | 2026-10-01 19:45 | Removed        |    3 >E
+     1 |                                                                                                           | 2026-10-01 19:37 | Install        |  677 EE

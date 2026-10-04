@@ -1,0 +1,21 @@
+● nginx.service - The nginx HTTP and reverse proxy server
+     Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; preset: disabled)
+    Drop-In: /usr/lib/systemd/system/service.d
+             └─10-timeout-abort.conf
+     Active: active (running) since Sun 2026-10-04 17:08:16 MSK; 34min ago
+    Process: 657 ExecStartPre=/usr/bin/rm -f /run/nginx.pid (code=exited, status=0/SUCCESS)
+    Process: 667 ExecStartPre=/usr/sbin/nginx -t (code=exited, status=0/SUCCESS)
+    Process: 710 ExecStart=/usr/sbin/nginx (code=exited, status=0/SUCCESS)
+   Main PID: 712 (nginx)
+      Tasks: 3 (limit: 4663)
+     Memory: 7.7M
+        CPU: 48ms
+     CGroup: /system.slice/nginx.service
+             ├─712 "nginx: master process /usr/sbin/nginx"
+             ├─713 "nginx: worker process"
+             └─714 "nginx: worker process"
+
+Oct 04 17:08:16 mephi-2026.domain.local systemd[1]: Starting nginx.service - The nginx HTTP and reverse proxy server...
+Oct 04 17:08:16 mephi-2026.domain.local nginx[667]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Oct 04 17:08:16 mephi-2026.domain.local nginx[667]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Oct 04 17:08:16 mephi-2026.domain.local systemd[1]: Started nginx.service - The nginx HTTP and reverse proxy server.

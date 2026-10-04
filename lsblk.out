@@ -1,0 +1,10 @@
+NAME   FSTYPE FSVER LABEL     UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
+sda                                                                               
+├─sda1                                                                            
+├─sda2 ext4   1.0             9322e777-5668-4a23-a9be-0f39da56eed2  633.1M    28% /boot
+├─sda3 swap   1               a3eda26b-b4d0-4184-9845-a15b600fb18f                [SWAP]
+└─sda4 ext4   1.0             68cd4bff-d844-4163-9e86-6934f2d59799   19.1G    14% /
+sdb                                                                               
+└─sdb1 ext4   1.0   MEPHI_WEB 579c9834-618f-4222-a1ac-735726041cbf    9.2G     0% /mephi-web
+sr0                                                                               
+zram0                                                                             [SWAP]

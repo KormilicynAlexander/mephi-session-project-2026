@@ -1,0 +1,191 @@
+    1  history
+    2  nmcli connection show
+    3  nmcli device status
+    4  ip addr
+    5  ip route
+    6  hostnamectl
+    7  hostnamectl set-hostname mephi-2026.domain.local
+    8  hostnamectl
+    9  hostnamectl --static
+   10  pwd
+   11  ping 8.8.8.8
+   12  pwd
+   13  ping -c 4 8.8.8.8 > /home/uadmin/ping.out
+   14  cat ping.out
+   15  dnf upgrade -y
+   16  dnf upgrade -y
+   17  dnf upgrade -y
+   18  dnf install -y nginx libcap-ng-utils
+   19  dnf install -y nginx libcap-ng-utils
+   20  dnf install -y nginx libcap-ng-utils
+   21  dnf install -y nginx libcap-ng-utils
+   22  ip route
+   23  cat /etc/resolv.conf
+   24  ping -c 2 repo.red-soft.ru
+   25  nmcli device show
+   26  nmcli connection modify "System enp0s3" ipv4.method auto
+   27  nmcli connection modify "enp0s3" ipv4.method auto
+   28  nmcli connection modify "enp0s3" ipv4.dns "8.8.8.8 1.1.1.1"
+   29  nmcli connection modify "enp0s3" ipv4.ignore-auto-dns yes
+   30  nmcli connection down "enp03s"
+   31  nmcli connection up "enp03s"
+   32  nmcli connection down "enp0s3"
+   33  nmcli connection up "enp0s3"
+   34  nmcli connection show --active
+   35  ping -c 2 repo.red-soft.ru
+   36  dnf upgrade -y
+   37  dnf install -y nginx libcap-ng-utils
+   38  rpm -q nginx
+   39  rpm -q libcap-ng-utils
+   40  cd /tmp
+   41  dnf download tcpdump
+   42  ls -l tcpdump*.rpm
+   43  rpm -ivh tcpdump*.rpm
+   44  ls
+   45  ls -l tcpdump*.rpm
+   46  uname -m
+   47  rm -f tcpdump*.rpm
+   48  dnf download tcpdump.x86_64
+   49  ls -lh tcpdump*.rpm
+   50  rpm -ivh tcpdump*.rpm
+   51  rpm -q tcpdump
+   52  commad -v tcpdump
+   53  command -v tcpdump
+   54  cd ..
+   55  pwd
+   56  command -v tcpdump
+   57  ls -l /usr/sbin/tcpdump
+   58  ls -l /sbin/tcpdump
+   59  lsblk -o NAME,SIZE,TYPE,FSTYPE,LABEL,MOUNTPOINTS
+   60  sudo poweroff
+   61  history
+   62  hostnamectl
+   63  lsblk -o NAME,SIZE,TYPE,FSTYPE,LABEL,MOUNTPOINTS
+   64  fdisk /dev/sdb
+   65  lsblk /dev/sdb
+   66  mkfs.ext4 -L MEPHI_WEB /dev/sdb1
+   67  lsblk -f
+   68  blkid /dev/sdb1
+   69  mkdir -p /mephi-web
+   70  cp /etc/fstab /etc/fstab.backup
+   71  vi /etc/fstab
+   72  cat /etc/fstab
+   73  mount /mephi-web
+   74  findmnt /mephi-web
+   75  df -hT /mephi-web
+   76  lsblk -f
+   77  mount -a
+   78  systemctl enable --now nginx
+   79  systemctl status nginx
+   80  systemctl is-enabled nginx
+   81  groupadd developers
+   82  gatent group developers
+   83  getent group developers
+   84  getent group 4444
+   85  groupadd -g 4444 curators
+   86  getent group curators
+   87  useradd -m -u 5501 -G developers user1
+   88  useradd -m -u 5502 -G developers user2
+   89  useradd -m -u 5503 -G developers user3
+   90  id user1
+   91  id user2
+   92  id user3
+   93  useradd -m -G curators curator1
+   94  useradd -m -G curators curator2
+   95  id curator1
+   96  id curator2
+   97  passwd user1
+   98  passwd user2
+   99  passwd user3
+  100  passwd curator1
+  101  passwd curator2
+  102  mkdir -p /data/mephi-2026
+  103  chown root:developers /data/mephi-2026
+  104  chmod 2770 /data/mephi-2026
+  105  ls -ld /data/mephi-2026
+  106  setfacl -m g:curators:r-x /data/mephi-2026
+  107  setfacI -m g:curators:r-x /data/mephi-2026
+  108  rpm -q acl
+  109  dnf install -y acl 
+  110  setfacl -m g:curators:r-x /data/mephi-2026
+  111  setfacl -m o::--- /data/mephi-2026
+  112  setfacl -d -m u::rwx /data/mephi-2026
+  113  setfacl -d -m g::rwx /data/mephi-2026
+  114  setfacl -d -m g:curators:r-x /data/mephi-2026
+  115  setfacl -d -m m::rwx /data/mephi-2026
+  116  setfacl -d -m o::--- /data/mephi-2026
+  117  getfacl /data/mephi-2026
+  118  ls -l /usr/sbin/tcpdump
+  119  chmod u-s /usr/sbin/tcpdump
+  120  ls -l /usr/sbin/tcpdump
+  121  setcap cap_net_raw,cap_net_admin=ep /usr/sbin/tcpdump
+  122  getcap /usr/sbin/tcpdump
+  123  -u user1 /usr/sbin/tcpdump -D
+  124  sudo -u user1 /usr/sbin/tcpdump -D
+  125  sudo -u user1 /usr/sbin/tcpdump -i any -c 1 -nn
+  126  getcap /usr/sbin/tcpdump
+  127  getenforce
+  128  grep '^SELINUX=' /etc/selinux/config
+  129  command -v semanage
+  130  dnf provides '*/semanage'
+  131  command -v semanage
+  132  dnf install -y policycoreutils-python-utils
+  133  dnf install -y policycoreutils-python-utils
+  134  command -v semanage
+  135  semanage fcontext -a -t httpd_sys_content_t "/mephi-web(/.*)?"
+  136  restorecon -Rv /mephi-web
+  137  ls -Zd /mephi-web
+  138  cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup
+  139  grep -n 'root' /etc/nginx/nginx.conf
+  140  sed -Ei 's#root[[:space:]]+/usr/share/nginx/html;#root /mephi-web;#' /etc/nginx/nginx.conf
+  141  grep -n 'root ' /etc/nginx/nginx.conf
+  142  nginx -t
+  143  systemctl restart nginx
+  144  ls -l /sbin/nologin
+  145  usermod -s /sbin/nologin curator1
+  146  usermod -s /sbin/nologin curator2
+  147  getent passwd curator1
+  148  getent passwd curator2
+  149  cp /etc/security/pwquality.conf /etc/security/pwquality.conf.backup
+  150  grep -n 'minlen' /etc/security/pwquality.conf
+  151  sed -Ei 's/^[#[:space:]]*minlen[[:space:]]*=.*/minlen = 12/' /etc/security/pwquality.conf
+  152  grep -n 'minlen' /etc/security/pwquality.conf
+  153  cp /etc/login.defs /etc/login.defs.backup
+  154  grep '^PASS_MAX_DAYS' /etc/login.defs
+  155  sed -Ei 's/^[[:space:]]*PASS_MAX_DAYS[[:space:]]+.*/PASS_MAX_DAYS   90/'  /etc/login.defs
+  156  grep '^PASS_MAX_DAYS' /etc/login.defs
+  157  chage -M 90 user1
+  158  chage -M 90 user2
+  159  chage -M 90 user3
+  160  chage -M 90 curator1
+  161  chage -M 90 curator2
+  162  chage -l user1
+  163  chage -l user2
+  164  chage -l user3
+  165  chage -l curator1
+  166  chage -l curator2
+  167  echo 'Hello from Student: M265907' | tee /mephi-web/index.html
+  168  cat /mephi-web/index.html 
+  169  chown root:root /mephi-web/index.html 
+  170  chmod 644 /mephi-web/index.html 
+  171  restorecon -v /mephi-web/index.html 
+  172  ls -lZ /mephi-web/index.html 
+  173  nginx -t
+  174  systemctl restart nginx
+  175  systemctl is-active nginx
+  176  curl http://localhost/
+  177  nginx -t
+  178  mount -a
+  179  reboot
+  180  history
+  181  hostname
+  182  findmnt /mephi-web
+  183  lsblk -f
+  184  systemctl is-enabled nginx
+  185  systemctl is-active nginx
+  186  getenforce
+  187  curl http://localhost/
+  188  getcap /usr/sbin/tcpdump
+  189  getfacl /data/mephi-2026
+  190  pwd
+  191  history > /home/uadmin/history.out
